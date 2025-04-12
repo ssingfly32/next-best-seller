@@ -1,0 +1,22 @@
+.nav {
+  margin-bottom: 20px;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul li {
+  padding: 20px;
+  font-size: 24px;
+}
+
+.nav ul li:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,47 @@
+.pageContainer {
+  background-color: #ffffff;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.categoryGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.categoryCard {
+  background-color: #fefefe;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoryCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.categoryName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .categoryGrid {
+    gap: 1rem;
+  }
+
+  .categoryName {
+    font-size: 1.1rem;
+  }
+}
