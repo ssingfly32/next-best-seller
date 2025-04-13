@@ -14,9 +14,9 @@
 
 .nav ul li {
   padding: 20px;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .nav ul li:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }

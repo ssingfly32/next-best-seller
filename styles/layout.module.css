@@ -1,0 +1,16 @@
+.pageContainer {
+  background-color: #ffffff;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3rem;
+}

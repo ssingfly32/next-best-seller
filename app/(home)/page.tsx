@@ -1,28 +1,31 @@
+import Category from "../../components/Category";
 import styles from "../../styles/home.module.css";
-import { API_URL } from "../constants";
+import { CATEGORY_API_URL } from "../constants";
 
 export const metadata = {
-  title: "Bestseller Lists",
+  title: "Bestseller Explorer",
 };
 
-async function getBestSellerLists() {
-  const response = await fetch(API_URL);
+async function getBestSellerCategories() {
+  const response = await fetch(CATEGORY_API_URL);
   const json = await response.json();
   return json;
 }
 
 export default async function Home() {
-  const bestSellers = await getBestSellerLists();
+  const categories = await getBestSellerCategories();
 
   return (
-    <div className={styles.pageContainer}>
+    <>
       <div className={styles.categoryGrid}>
-        {bestSellers.results.map((category, index) => (
-          <div key={index} className={styles.categoryCard}>
-            <h2 className={styles.categoryName}>{category.display_name}</h2>
-          </div>
+        {categories.results.map((category) => (
+          <Category
+            key={category.list_name_encoded}
+            displayName={category.display_name}
+            listNameEncoded={category.list_name_encoded}
+          />
         ))}
       </div>
-    </div>
+    </>
   );
 }

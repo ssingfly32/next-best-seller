@@ -1,0 +1,131 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.listTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.listTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+
+.bookGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.bookCard {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.bookCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+  width: 225px;
+  height: 270px;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.bookImage {
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain;  */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bookTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.bookAuthor {
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  text-align: left;
+}
+
+.bookRank {
+  font-weight: bold;
+  color: #0070f3;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.detailsButton {
+  color: black;
+  border: solid 1px black;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: auto;
+  text-decoration: none;
+}
+
+.detailsButton:hover {
+  background-color: #f5f5f5;
+}
+
+@media (max-width: 1024px) {
+  .bookGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bookGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bookGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .imageContainer {
+    width: 200px;
+    height: 300px;
+  }
+}
